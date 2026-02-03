@@ -15,7 +15,8 @@ const StatsSection: React.FC = () => {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 md:gap-24">
           {stats.map((stat, idx) => (
             <div key={idx} className="group cursor-default">
-              <div className="text-xs font-black tracking-[0.2em] text-blue-500 uppercase mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
+              {/* Blue text changed to Teal */}
+              <div className="text-xs font-black tracking-[0.2em] text-teal-500 uppercase mb-4 opacity-70 group-hover:opacity-100 transition-opacity">
                 {stat.label}
               </div>
               <div className="text-5xl md:text-7xl font-black text-white mb-2 tracking-tighter transition-transform duration-500 group-hover:translate-x-2">

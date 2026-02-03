@@ -8,7 +8,7 @@ const focusAreas = [
     title: 'FinTech',
     desc: 'Revolutionizing digital banking and payments with intelligent automation.',
     icon: <Cpu className="w-8 h-8" />,
-    color: 'blue'
+    color: 'teal' /* Changed from blue to teal */
   },
   {
     title: 'InsurTech',
@@ -20,7 +20,7 @@ const focusAreas = [
     title: 'Digital Learning',
     desc: 'Empowering the next generation with interactive e-learning platforms.',
     icon: <GraduationCap className="w-8 h-8" />,
-    color: 'teal'
+    color: 'emerald'
   },
   {
     title: 'ImmersiveTech',
@@ -39,9 +39,9 @@ const Features: React.FC = () => {
             <div key={idx} className="bento-card group glass p-10 rounded-[2.5rem] relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-white/5 to-transparent rounded-bl-full"></div>
               <div className={`w-16 h-16 rounded-2xl mb-8 flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-6 ${
-                area.color === 'blue' ? 'bg-blue-600/20 text-blue-400' :
+                area.color === 'teal' ? 'bg-teal-600/20 text-teal-400' :
                 area.color === 'orange' ? 'bg-orange-600/20 text-orange-400' :
-                area.color === 'teal' ? 'bg-emerald-600/20 text-emerald-400' :
+                area.color === 'emerald' ? 'bg-emerald-600/20 text-emerald-400' :
                 'bg-purple-600/20 text-purple-400'
               }`}>
                 {area.icon}

@@ -9,7 +9,7 @@ const solutions = [
     type: 'Lending Platform',
     size: 'lg',
     img: 'https://picsum.photos/seed/ziva/800/600',
-    color: 'from-blue-600/20'
+    color: 'from-teal-600/20' /* Blue to Teal */
   },
   {
     id: 'statim',
@@ -25,7 +25,7 @@ const solutions = [
     type: 'Learning Platform',
     size: 'sm',
     img: 'https://picsum.photos/seed/axle/400/300',
-    color: 'from-teal-600/20'
+    color: 'from-emerald-600/20'
   },
   {
     id: 'immerz',
@@ -52,7 +52,7 @@ const SolutionsBento: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
-              CRAFTING <span className="text-blue-500">DIGITAL</span> <br /> 
+              CRAFTING <span className="text-teal-500">DIGITAL</span> <br /> 
               EXCELLENCE AT SCALE
             </h2>
             <p className="text-lg text-slate-400 font-medium">
@@ -70,7 +70,7 @@ const SolutionsBento: React.FC = () => {
             <img src={solutions[0].img} className="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-110" alt="" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-10">
-              <div className="mb-4 px-3 py-1 bg-blue-600 text-[10px] font-black tracking-widest uppercase rounded-full w-fit">Featured Product</div>
+              <div className="mb-4 px-3 py-1 bg-teal-600 text-[10px] font-black tracking-widest uppercase rounded-full w-fit">Featured Product</div>
               <h3 className="text-5xl font-black text-white mb-2">{solutions[0].name}</h3>
               <p className="text-xl text-slate-300 font-medium">{solutions[0].type}</p>
             </div>

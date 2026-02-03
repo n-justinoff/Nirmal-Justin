@@ -8,8 +8,8 @@ const Hero: React.FC = () => {
     <section className="relative pt-40 pb-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
         <div className="flex-1 text-center lg:text-left z-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-blue-500/30 text-blue-400 text-sm font-bold mb-8">
-            <span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass border-teal-500/30 text-teal-400 text-sm font-bold mb-8">
+            <span className="flex h-2 w-2 rounded-full bg-teal-500 animate-pulse"></span>
             TRANSFORMING ENTERPRISES SINCE 19+ YEARS
           </div>
           <h1 className="text-6xl md:text-8xl font-black mb-8 leading-[0.9] tracking-tighter">
@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
               <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button className="group flex items-center gap-3 px-8 py-5 glass hover:bg-white/5 text-white rounded-2xl font-bold text-lg transition-all">
-              <div className="w-10 h-10 rounded-full bg-blue-600/20 flex items-center justify-center border border-blue-500/30 group-hover:bg-blue-600 transition-colors">
+              <div className="w-10 h-10 rounded-full bg-teal-600/20 flex items-center justify-center border border-teal-500/30 group-hover:bg-teal-600 transition-colors">
                 <Play size={16} fill="white" />
               </div>
               Watch Showreel
@@ -43,16 +43,16 @@ const Hero: React.FC = () => {
 
         <div className="flex-1 relative">
           <div className="relative z-10 animate-float">
-            <div className="absolute inset-0 bg-blue-500 blur-[100px] opacity-20 -z-10"></div>
+            <div className="absolute inset-0 bg-teal-500 blur-[100px] opacity-20 -z-10"></div>
             <img 
               src="https://picsum.photos/seed/techhero/800/1000" 
               alt="Futuristic Tech" 
               className="rounded-[3rem] shadow-2xl border border-white/10 w-full object-cover aspect-[4/5] object-center"
             />
-            {/* Floating UI elements */}
+            {/* Floating UI elements - Blue to Green/Teal */}
             <div className="absolute top-10 -left-12 glass p-6 rounded-3xl border-white/20 shadow-2xl hidden md:block">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center text-green-400">
+                <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400">
                   <Cpu size={24} />
                 </div>
                 <div>

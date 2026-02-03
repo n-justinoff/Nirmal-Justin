@@ -46,7 +46,7 @@ const InsightsSection: React.FC = () => {
                   {item.category}
                 </div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors leading-tight">
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-teal-400 transition-colors leading-tight">
                 {item.title}
               </h3>
               <div className="flex items-center gap-6 text-slate-500 text-sm font-medium">
