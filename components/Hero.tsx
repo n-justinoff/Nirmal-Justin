@@ -1,9 +1,15 @@
 
 import React from 'react';
-/* Added missing Cpu and ShieldCheck icons */
 import { ArrowRight, Play, Cpu, ShieldCheck } from 'lucide-react';
 
-const Hero: React.FC = () => {
+interface HeroProps {
+  scrollY?: number;
+}
+
+const Hero: React.FC<HeroProps> = ({ scrollY = 0 }) => {
+  // Calculate parallax offset - move slightly slower than the scroll
+  const parallaxOffset = scrollY * 0.12;
+
   return (
     <section className="relative pt-40 pb-20 px-6 overflow-hidden">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
@@ -42,34 +48,41 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="flex-1 relative">
-          <div className="relative z-10 animate-float">
+          <div 
+            className="relative z-10 will-change-transform transition-transform duration-75 ease-out"
+            style={{ transform: `translateY(${parallaxOffset}px)` }}
+          >
             <div className="absolute inset-0 bg-teal-500 blur-[100px] opacity-20 -z-10"></div>
-            <img 
-              src="https://picsum.photos/seed/techhero/800/1000" 
-              alt="Futuristic Tech" 
-              className="rounded-[3rem] shadow-2xl border border-white/10 w-full object-cover aspect-[4/5] object-center"
-            />
-            {/* Floating UI elements - Blue to Green/Teal */}
-            <div className="absolute top-10 -left-12 glass p-6 rounded-3xl border-white/20 shadow-2xl hidden md:block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400">
-                  <Cpu size={24} />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 uppercase font-bold tracking-widest">Efficiency</div>
-                  <div className="text-xl font-bold text-white">+98.4%</div>
+            
+            <div className="animate-float">
+              <img 
+                src="https://picsum.photos/seed/techhero/800/1000" 
+                alt="Futuristic Tech" 
+                className="rounded-[3rem] shadow-2xl border border-white/10 w-full object-cover aspect-[4/5] object-center"
+              />
+              
+              {/* Floating UI elements - Blue to Green/Teal */}
+              <div className="absolute top-10 -left-12 glass p-6 rounded-3xl border-white/20 shadow-2xl hidden md:block">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-emerald-500/20 rounded-full flex items-center justify-center text-emerald-400">
+                    <Cpu size={24} />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-400 uppercase font-bold tracking-widest">Efficiency</div>
+                    <div className="text-xl font-bold text-white">+98.4%</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="absolute bottom-10 -right-8 glass p-6 rounded-3xl border-white/20 shadow-2xl hidden md:block">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400">
-                  <ShieldCheck size={24} />
-                </div>
-                <div>
-                  <div className="text-xs text-slate-400 uppercase font-bold tracking-widest">Secured</div>
-                  <div className="text-xl font-bold text-white">Bank Grade</div>
+              
+              <div className="absolute bottom-10 -right-8 glass p-6 rounded-3xl border-white/20 shadow-2xl hidden md:block">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-orange-400">
+                    <ShieldCheck size={24} />
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-400 uppercase font-bold tracking-widest">Secured</div>
+                    <div className="text-xl font-bold text-white">Bank Grade</div>
+                  </div>
                 </div>
               </div>
             </div>

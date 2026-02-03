@@ -45,7 +45,7 @@ const App: React.FC = () => {
       <Header scrollY={scrollY} />
       
       <main>
-        <Hero />
+        <Hero scrollY={scrollY} />
         <Features />
         <SolutionsBento />
         <StatsSection />
